@@ -5,3 +5,51 @@
     object-fit: contain;
     display: block;
 }
+
+/* NYASI EVENTS GALLERY */
+.gallery {
+    background: #f0eee8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    background: #fbfaf7;
+    overflow: hidden;
+    border-bottom: 3px solid #c19a62;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-item h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 18px;
+    margin: 0;
+    color: #24312a;
+}
+
+@media (max-width: 700px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+}
